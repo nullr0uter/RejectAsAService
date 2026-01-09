@@ -20,8 +20,7 @@ def get_random_rejection(culture: Literal['de','en']) -> str:
 
 @app.route('/')
 def root() -> Response:
-    return Response(
-        json.dumps({'culture':'Please choose /de or /en'}, ensure_ascii=False), mimetype='application/json; charset=utf-8')
+    return Response(json.dumps({'culture':'Please choose /de or /en'}, ensure_ascii=False), mimetype='application/json; charset=utf-8')
 
 @app.route('/de')
 def german_reject() -> Response:
